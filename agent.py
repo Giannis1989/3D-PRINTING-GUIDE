@@ -1,5 +1,6 @@
 import os
 import glob
+import time
 from github import Github
 from google import genai
 
@@ -43,18 +44,18 @@ if user_query.strip().startswith("/add"):
     Διάβασε τα υπάρχοντα αρχεία του οδηγού:
     {guide_content}
     
-    Απάντησε ΑΥΣΤΗΡΑ με την εξής μορφή ώστε να γίνει αυτόματη αποθήκευση:
+    Απάντησε ΑΥΣΤΗΡΑ με την εξής μορφή:
     FILE: <ακριβές όνομα υπάρχοντος αρχείου .md ή νέου αρχείου .md>
     CONTENT:
-    <ολόκληρο το ενημερωμένο περιεχόμενο του αρχείου σε καθαρό Markdown χωρίς backticks στην αρχή/τέλος>
+    <ολόκληρο το ενημερωμένο περιεχόμενο του αρχείου σε καθαρό Markdown χωρίς ```markdown στην αρχή/τέλος>
     """
-    result = ask_gemini(prompt)
+    result = ask_gemini(prompt).strip()
     
-    lines = result.splitlines()
-    target_file = lines[0].replace("FILE:", "").strip()
-    new_content = "\n".join(lines[2:]).strip()
+    header, new_content = result.split("CONTENT:", 1)
+    target_file = header.replace("FILE:", "").strip()
+    new_content = new_content.strip()
     
-    branch_name = f"ai-update-issue-{issue.number}"
+    branch_name = f"ai-update-{issue.number}-{int(time.time())}"
     main_ref = repo.get_git_ref("heads/main")
     repo.create_git_ref(ref=f"refs/heads/{branch_name}", sha=main_ref.object.sha)
     
