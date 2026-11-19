@@ -20,6 +20,8 @@ theme:
         name: Αλλαγή σε φωτεινό θέμα
   features:
     - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
     - toc.integrate
     - search.suggest
