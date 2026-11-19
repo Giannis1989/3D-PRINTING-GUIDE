@@ -15,14 +15,14 @@
 
 | Κατηγορία | Μοντέλα | Χαρακτηριστικά |
 | :--- | :--- | :--- |
-| **Οικονομική (έως 350€)** | Creality Ender-3 V3 SE (~180–220€) · Bambu Lab A1 Mini (~220–350€ με AMS Lite) · Elegoo Centauri Carbon (~300–340€) | 220×220×250mm, CR Touch, direct drive · 180³mm, αυτόματο, έως 4 χρώματα · κλειστός θάλαμος CoreXY |
-| **Μεσαία (350–750€)** | Bambu Lab A1 (~350–500€) · Anycubic Kobra S1 / 3 Combo (~380–500€) · Bambu Lab P2S / P1S (~450–650€) | 256³mm, γρήγορη αλλαγή nozzle · ACE Pro με στεγνωτήριο · κλειστός CoreXY για ABS/ASA/PC  , Snapmaker u1 699 € |
-| **Υψηλή (750–1.300€)** | Bambu Lab X2D / X1 Carbon (~750–1.200€) · Prusa CORE One+ (~1.000–1.200€) · Snapmaker U1 (~850–1.000€) | Αισθητήρες AI, carbon fiber · μεταλλικός σκελετός, κλειστός θάλαμος · toolchanger με ελάχιστη σπατάλη |
-| **Επαγγελματική (>1.300€)** | Creality K2 Plus Combo (~1.300–1.500€) · Prusa XL (~2.200–3.900€) · Bambu Lab H3C Combo (~2.500–2.850€) · Bambu Lab H2C (1.100–1.700€) | 350³mm, έως 16 χρώματα · 360³mm, έως 5 κεφαλές · SwapTek 9 εργαλείων, θάλαμος 65°C |
+| **Οικονομική (έως 350€)** | Creality Ender-3 V3 SE (~180–220€) · Bambu Lab A1 Mini (~220–350€ με AMS Lite) · Elegoo Centauri Carbon (~300–340€) · Sovol SV07 (~250–300€) | 220×220×250mm, CR Touch · 180³mm, έως 4 χρώματα · Κλειστός θάλαμος CoreXY |
+| **Μεσαία (350–750€)** | Bambu Lab A1 (~350–500€) · Anycubic Kobra 3 Combo (~380–500€) · Bambu Lab P1S (~600–750€) · Creality K1C (~500–600€) | 256³mm, αυτόματη βαθμονόμηση · ACE Pro στεγνωτήριο · Κλειστός θάλαμος, AI camera |
+| **Υψηλή (750–1.300€)** | Bambu Lab X1 Carbon (~950–1.200€) · Prusa MK4S (~800–1.100€) · QIDI X-Plus 3 (~750–900€) · Snapmaker U1 (~850–1.000€) | Lidar, carbon fiber · Υψηλή αξιοπιστία · Θερμαινόμενος θάλαμος, CoreXY |
+| **Επαγγελματική (>1.300€)** | Creality K2 Plus Combo (~1.300–1.500€) · Prusa XL (~2.200–3.900€) · Bambu Lab H3C Combo (~2.500–2.850€) · Bambu Lab H2C (1.100–1.700€) | 350³mm, έως 16 χρώματα · 360³mm, έως 5 κεφαλές · SwapTek 9 εργαλείων |
 
-- **«Πατάω ένα κουμπί»:** Bambu Lab A1 Mini, A1 ή P2S.
-- **Εκμάθηση μηχανικής με χαμηλό κόστος:** Creality Ender-3 V3 SE ή Sovol SV06 ACE.
-- **ABS/ASA/Nylon σε εσωτερικό χώρο:** υποχρεωτικά κλειστός θάλαμος (Elegoo Centauri Carbon, Bambu P2S, QIDI, Prusa CORE One+).
+- **«Πατάω ένα κουμπί»:** Bambu Lab A1 Mini, A1 ή P1S.
+- **Εκμάθηση μηχανικής με χαμηλό κόστος:** Creality Ender-3 V3 SE ή Sovol SV06 / SV07.
+- **ABS/ASA/Nylon σε εσωτερικό χώρο:** υποχρεωτικά κλειστός θάλαμος (Creality K1C, Bambu P1S/X1C, QIDI X-Series, Prusa CORE One+).
 
 ---
 
