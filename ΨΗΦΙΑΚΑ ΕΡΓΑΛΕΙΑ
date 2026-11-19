@@ -1,0 +1,100 @@
+# Μέρος Γ: Ψηφιακά εργαλεία
+
+## 12. Ιστοσελίδες για έτοιμα αρχεία
+
+- **Printables** (printables.com): κοινότητα της Prusa, διαγωνισμοί και δωρεάν νήματα ως επιβράβευση.
+- **MakerWorld** (makerworld.com): της Bambu Lab, με έτοιμα προφίλ εκτύπωσης.
+- **Thingiverse:** η παλαιότερη και μεγαλύτερη βιβλιοθήκη. **Cults3D:** καλλιτεχνικά σχέδια και φιγούρες. **MyMiniFactory:** φιγούρες D&D/Warhammer. **GrabCAD:** μηχανολογικά εξαρτήματα.
+- **Επιπλέον:** MakerOnline, Nexprint, Pinshape, Free3D, Sketchfab, Instructables (οδηγοί Arduino/Raspberry Pi).
+- **Patreon & 3DNINE:** συνδρομητικοί σχεδιαστές και bundles 800.000+ STL (3dnine.com).
+- **Μηχανές αναζήτησης STL:** Yeggi, Thangs, 3D Search, PrintWhat.
+- **Ειδικά εργαλεία:** Lithophane Maker (lithophanemaker.com), BumpMesh (bumpmesh.com) και μετατροπείς προφίλ Bambu σε Elegoo/Flashforge/Snapmaker (3dtoolbox.uk/converter, bedready.io/convert, u1convert.com).
+
+---
+
+## 13. Slicer, CAD & reverse engineering
+
+- **Slicers:** OrcaSlicer (open-source, με calibration tests), Bambu Studio, PrusaSlicer, UltiMaker Cura, Kiri:Moto (grid.space/kiri, τρέχει στον browser ακόμη και από κινητό), Creality Print.
+- **CAD & 3D modeling:** Tinkercad (δωρεάν, στον browser), Autodesk Fusion & Onshape (ακρίβεια), Blender (δωρεάν), Nomad Sculpt (~15–20€).
+- **Reverse engineering σπασμένου εξαρτήματος:**
+  1. Μετρήστε με παχύμετρο.
+  2. Φωτογραφίστε το σε λευκό χαρτί δίπλα σε χάρακα, με το κινητό ψηλά και zoom 2x–3x.
+  3. Εισάγετε τη φωτογραφία στο Fusion/Onshape (Insert Canvas), βαθμονομήστε την κλίμακα με τον χάρακα και σχεδιάστε πάνω στο περίγραμμα.
+
+---
+
+## 14. Ρυθμίσεις slicer & κρυφές λειτουργίες
+
+### Γενικές ρυθμίσεις ανά είδος μοντέλου
+
+| Παράμετρος | Διακοσμητικά | Μηχανικά | Μινιατούρες |
+| :--- | :--- | :--- | :--- |
+| **Layer height** | 0.20mm | 0.20–0.24mm | 0.08–0.12mm |
+| **Wall loops** | 2–3 | 4–6 | 3 |
+| **Infill** | 10–15% | 40–70% | 15–20% |
+| **Μοτίβο** | Grid ή Lightning | Gyroid ή Cubic | Gyroid ή Grid |
+| **Top/Bottom** | 3–4 | 5–6 | 5–6 |
+| **Ταχύτητα** | Κανονική/υψηλή | Μέτρια | Αργή |
+
+### Ανά υλικό (nozzle 0.4mm, σημείο εκκίνησης)
+
+| Υλικό | Ταχύτητα | Ψύξη | Retraction (DD) | Σημαντικό |
+| :--- | :--- | :--- | :--- | :--- |
+| **PLA** | Κανονική–υψηλή | 100% | 0.5–1mm | Το πιο επιεικές υλικό. |
+| **PETG** | 40–80 mm/s | 30–60% | 1–2mm | Ελαφρώς πιο ψηλό Z-offset. Υγρό PETG σημαίνει stringing. |
+| **TPU** | 20–35 mm/s | 50–100% | 0–1mm, αργά | Direct drive extruder, αποφύγετε γρήγορες κινήσεις. |
+| **ABS/ASA** | 40–80 mm/s | 0–20% | 0.5–1.5mm | Κλειστός θάλαμος, χωρίς ρεύματα, brim κατά του warping. |
+| **Nylon/PA-CF** | 30–60 mm/s | 0–30% | 1–2mm | Στέγνωμα, hardened nozzle για CF, κόλλα στικ. |
+
+### Οι 3 «κρυφές» λειτουργίες
+- **Ironing:** δεύτερο πέρασμα χωρίς υλικό στην πάνω επιφάνεια, για γυαλιστερό αποτέλεσμα (πινακίδες, καπάκια).
+- **Fuzzy Skin:** ανάγλυφη, ματ υφή στα εξωτερικά τοιχώματα (λαβές, διακοσμητικά).
+- **Scarf Seam:** στο OrcaSlicer και Bambu Studio, εξαφανίζει τη γραμμή Z-seam σε κυλινδρικά αντικείμενα.
+
+---
+
+## 15. Παραμετρικά μοντέλα
+
+Πληκτρολογείτε τις διαστάσεις που θέλετε και το σχέδιο προσαρμόζεται αυτόματα, χωρίς γνώσεις CAD.
+
+- **Gridfinity:** σύστημα οργάνωσης συρταριών με βάσεις και κουτάκια που κουμπώνουν.
+- **Multiboard & HSW (Honeycomb Storage Wall):** αρθρωτά συστήματα τοίχου με γάντζους και ράφια χωρίς βίδες.
+- **Generators:** Parametric Model Maker (MakerWorld) ή OpenSCAD για κουτιά, γρανάζια, σπειρώματα, πινακίδες. Αλλάζετε παραμέτρους και κατεβάζετε το STL.
+
+---
+
+## 16. Εφαρμογές κινητού & απομακρυσμένος έλεγχος
+
+- **Επίσημες εφαρμογές:** Bambu Handy, Creality Cloud, Prusa App, Anycubic App (κάμερα, θερμοκρασίες, εκτύπωση από το κινητό).
+- **Open-source:** OctoPrint (Raspberry Pi), Mainsail/Fluidd με Mobileraker.
+- **Obico:** παρακολούθηση με AI. Σταματά την εκτύπωση αν δει «μακαρονάδα» και στέλνει ειδοποίηση.
+
+---
+
+## 17. Εργαλεία AI
+
+- **Meshy AI & Tripo AI:** Text-to-3D και Image-to-3D (meshy.ai, tripo3d.ai).
+- **Hyper3D Rodin & MakerWorld MakerLab:** χαρακτήρες, πινακίδες, αγαλματίδια.
+- **HueForge (~18–24$ εφάπαξ):** μετατρέπει 2D φωτογραφία σε 3D ανάγλυφο πίνακα.
+- **Remeshy & PrintFix AI:** Remeshy (remeshy.com) για μπρελόκ/λογότυπα και επιδιόρθωση STL. PrintFix AI (printfix.io) διαγιγνώσκει σφάλματα από φωτογραφία.
+
+---
+
+## 18. Απαιτήσεις υπολογιστή
+
+Δεν χρειάζεστε ισχυρό υπολογιστή για να ξεκινήσετε. Ελέγξτε τις επίσημες απαιτήσεις κάθε προγράμματος πριν από αγορά.
+
+- **Slicer:** μετράει η ταχύτητα ενός πυρήνα, και η RAM για μεγάλα ή πολύχρωμα μοντέλα.
+- **Tinkercad/Onshape:** στον browser, ζητούν ελάχιστα. **Fusion:** σύγχρονος επεξεργαστής, 16GB RAM, χωρίς επίσημη υποστήριξη σε Linux.
+- **Blender & sculpting:** κάρτα γραφικών και RAM (το Nomad Sculpt τρέχει σε iPad/tablet). **Εργαλεία AI:** στο cloud.
+
+| Επίπεδο | Καλύπτει | Απαιτήσεις |
+| :--- | :--- | :--- |
+| **Βασικό** | Tinkercad, slicing, έτοιμα μοντέλα | Laptop 4–5 ετών, 8GB RAM (καλύτερα 16GB), SSD, ενσωματωμένη κάρτα |
+| **Άνετο** | Fusion/Onshape, μεσαία μοντέλα | 6–8 πυρήνες, 16GB RAM, SSD 512GB |
+| **Βαρύ** | Blender, sculpting, μεγάλα πολύχρωμα | 32GB RAM, κάρτα με 6–8GB VRAM |
+
+> Ποντίκι με τρία κουμπιά για CAD και οθόνη τουλάχιστον 1080p. Για αρχάριο αρκεί το βασικό επίπεδο.
+
+---
+[⬅️ Προηγούμενο: Μέρος Β](02-ylika-akrofysia.md) | [🏠 Πίνακας Περιεχομένων](README.md) | [Επόμενο: Μέρος Δ ➡️](04-praktiki-syntirisi.md)
