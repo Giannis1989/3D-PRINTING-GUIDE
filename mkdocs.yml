@@ -1,0 +1,41 @@
+site_name: Ο Απόλυτος Οδηγός 3D Εκτύπωσης (FDM)
+site_description: Από αρχάριο σε προχωρημένο - Εξοπλισμός, Υλικά, Slicers, AI & Συντήρηση
+site_url: https://github.io
+
+theme:
+  name: material
+  language: el
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Αλλαγή σε σκοτεινό θέμα
+    - scheme: slate
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Αλλαγή σε φωτεινό θέμα
+  features:
+    - navigation.instant
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Αρχική: README.md
+  - Α. Αγορά & Εξοπλισμός: 01-agora-exoplismos.md
+  - Β. Υλικά & Ακροφύσια: 02-ylika-akrofysia.md
+  - Γ. Ψηφιακά Εργαλεία: 03-psifiaka-ergaleia.md
+  - Δ. Πρακτική & Συντήρηση: 04-praktiki-syntirisi.md
+  - Ε. Κόστος, Ασφάλεια & FAQ: 05-kostos-asfaleia-faq.md
