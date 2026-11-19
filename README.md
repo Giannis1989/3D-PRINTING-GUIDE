@@ -2,6 +2,8 @@
 
 > **Από αρχάριο σε προχωρημένο** · Εξοπλισμός · Υλικά · Slicers & CAD · AI · Τεχνικές · Συντήρηση *(έκδοση 9.0)*
 
+[![Facebook Group](https://img.shields.io/badge/Facebook-3D%20Printing%20Greece-1877F2?style=flat-square&logo=facebook&logoColor=white)](https://www.facebook.com/groups/694949453887454/)
+
 ---
 
 ## Πίνακας Περιεχομένων
