@@ -10,18 +10,19 @@
 - **Μηχανές αναζήτησης STL:** Yeggi, Thangs, 3D Search, PrintWhat.
 - **Ειδικά εργαλεία:** Lithophane Maker (lithophanemaker.com), BumpMesh (bumpmesh.com) και μετατροπείς προφίλ Bambu σε Elegoo/Flashforge/Snapmaker (3dtoolbox.uk/converter, bedready.io/convert, u1convert.com).
 
----
-
 ## 13. Slicer, CAD & reverse engineering
 
 - **Slicers:** OrcaSlicer (open-source, με calibration tests), Bambu Studio, PrusaSlicer, UltiMaker Cura, Kiri:Moto (grid.space/kiri, τρέχει στον browser ακόμη και από κινητό), Creality Print.
-- **CAD & 3D modeling:** Tinkercad (δωρεάν, στον browser), Autodesk Fusion & Onshape (ακρίβεια), Blender (δωρεάν), Nomad Sculpt (~15–20€).
+- **CAD & 3D modeling:** 
+    - **Tinkercad:** δωρεάν, ιδανικό για αρχάριους στον browser.
+    - **Solidcraft:** δωρεάν εναλλακτική λύση (clone του Fusion 360) για παραμετρικό σχεδιασμό και μηχανολογικά εξαρτήματα.
+    - **Autodesk Fusion & Onshape:** επαγγελματική ακρίβεια.
+    - **Blender:** για οργανικό modeling.
+    - **Nomad Sculpt:** (~15–20€) για ψηφιακό γλυπτό σε tablet.
 - **Reverse engineering σπασμένου εξαρτήματος:**
   1. Μετρήστε με παχύμετρο.
   2. Φωτογραφίστε το σε λευκό χαρτί δίπλα σε χάρακα, με το κινητό ψηλά και zoom 2x–3x.
   3. Εισάγετε τη φωτογραφία στο Fusion/Onshape (Insert Canvas), βαθμονομήστε την κλίμακα με τον χάρακα και σχεδιάστε πάνω στο περίγραμμα.
-
----
 
 ## 14. Ρυθμίσεις slicer & κρυφές λειτουργίες
 
@@ -51,8 +52,6 @@
 - **Fuzzy Skin:** ανάγλυφη, ματ υφή στα εξωτερικά τοιχώματα (λαβές, διακοσμητικά).
 - **Scarf Seam:** στο OrcaSlicer και Bambu Studio, εξαφανίζει τη γραμμή Z-seam σε κυλινδρικά αντικείμενα.
 
----
-
 ## 15. Παραμετρικά μοντέλα
 
 Πληκτρολογείτε τις διαστάσεις που θέλετε και το σχέδιο προσαρμόζεται αυτόματα, χωρίς γνώσεις CAD.
@@ -61,15 +60,11 @@
 - **Multiboard & HSW (Honeycomb Storage Wall):** αρθρωτά συστήματα τοίχου με γάντζους και ράφια χωρίς βίδες.
 - **Generators:** Parametric Model Maker (MakerWorld) ή OpenSCAD για κουτιά, γρανάζια, σπειρώματα, πινακίδες. Αλλάζετε παραμέτρους και κατεβάζετε το STL.
 
----
-
 ## 16. Εφαρμογές κινητού & απομακρυσμένος έλεγχος
 
 - **Επίσημες εφαρμογές:** Bambu Handy, Creality Cloud, Prusa App, Anycubic App (κάμερα, θερμοκρασίες, εκτύπωση από το κινητό).
 - **Open-source:** OctoPrint (Raspberry Pi), Mainsail/Fluidd με Mobileraker.
 - **Obico:** παρακολούθηση με AI. Σταματά την εκτύπωση αν δει «μακαρονάδα» και στέλνει ειδοποίηση.
-
----
 
 ## 17. Εργαλεία AI
 
@@ -77,8 +72,6 @@
 - **Hyper3D Rodin & MakerWorld MakerLab:** χαρακτήρες, πινακίδες, αγαλματίδια.
 - **HueForge (~18–24$ εφάπαξ):** μετατρέπει 2D φωτογραφία σε 3D ανάγλυφο πίνακα.
 - **Remeshy & PrintFix AI:** Remeshy (remeshy.com) για μπρελόκ/λογότυπα και επιδιόρθωση STL. PrintFix AI (printfix.io) διαγιγνώσκει σφάλματα από φωτογραφία.
-
----
 
 ## 18. Απαιτήσεις υπολογιστή
 
