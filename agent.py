@@ -34,30 +34,31 @@ prompt = f"""
 {user_query}
 """
 
-models_to_try = [
-    "gemini-2.5-flash-lite",
-    "gemini-3-flash-preview",
-    "gemini-2.5-pro",
-    "gemini-2.0-flash"
-]
+available_models = []
+for m in client.models.list():
+    name = m.name.replace("models/", "")
+    if "gemini" in name and "embedding" not in name and "imagen" not in name and "veo" not in name:
+        available_models.append(name)
+
+print("Διαθέσιμα μοντέλα:", available_models)
 
 response_text = None
 last_error = None
 
-for model_name in models_to_try:
+for model_name in available_models:
     try:
         response = client.models.generate_content(
             model=model_name,
             contents=prompt,
         )
         response_text = response.text
-        print(f"Success with {model_name}")
+        print(f"Επιτυχία με το μοντέλο: {model_name}")
         break
     except Exception as e:
         last_error = e
-        print(f"Failed with {model_name}: {e}")
+        print(f"Αποτυχία με {model_name}: {e}")
 
 if not response_text:
-    raise RuntimeError(f"Κανένα μοντέλο δεν λειτούργησε. Τελευταίο σφάλμα: {last_error}")
+    raise RuntimeError(f"Δεν βρέθηκε ενεργό μοντέλο. Διαθέσιμα: {available_models}. Τελευταίο σφάλμα: {last_error}")
 
 issue.create_comment(response_text)
