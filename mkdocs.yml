@@ -1,6 +1,7 @@
 site_name: Ο Απόλυτος Οδηγός 3D Εκτύπωσης (FDM)
 site_description: Από αρχάριο σε προχωρημένο - Εξοπλισμός, Υλικά, Slicers, AI & Συντήρηση
 site_url: https://github.io
+docs_dir: .
 
 theme:
   name: material
