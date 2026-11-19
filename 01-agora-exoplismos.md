@@ -16,7 +16,7 @@
 | Κατηγορία | Μοντέλα | Χαρακτηριστικά |
 | :--- | :--- | :--- |
 | **Οικονομική (έως 350€)** | Creality Ender-3 V3 SE (~180–220€) · Bambu Lab A1 Mini (~220–350€ με AMS Lite) · Elegoo Centauri Carbon (~300–340€) | 220×220×250mm, CR Touch, direct drive · 180³mm, αυτόματο, έως 4 χρώματα · κλειστός θάλαμος CoreXY |
-| **Μεσαία (350–750€)** | Bambu Lab A1 (~350–500€) · Anycubic Kobra S1 / 3 Combo (~380–500€) · Bambu Lab P2S / P1S (~450–650€) | 256³mm, γρήγορη αλλαγή nozzle · ACE Pro με στεγνωτήριο · κλειστός CoreXY για ABS/ASA/PC |
+| **Μεσαία (350–750€)** | Bambu Lab A1 (~350–500€) · Anycubic Kobra S1 / 3 Combo (~380–500€) · Bambu Lab P2S / P1S (~450–650€) | 256³mm, γρήγορη αλλαγή nozzle · ACE Pro με στεγνωτήριο · κλειστός CoreXY για ABS/ASA/PC  , Snapmaker u1 699 € |
 | **Υψηλή (750–1.300€)** | Bambu Lab X2D / X1 Carbon (~750–1.200€) · Prusa CORE One+ (~1.000–1.200€) · Snapmaker U1 (~850–1.000€) | Αισθητήρες AI, carbon fiber · μεταλλικός σκελετός, κλειστός θάλαμος · toolchanger με ελάχιστη σπατάλη |
 | **Επαγγελματική (>1.300€)** | Creality K2 Plus Combo (~1.300–1.500€) · Prusa XL (~2.200–3.900€) · Bambu Lab H3C Combo (~2.500–2.850€) · Bambu Lab H2C (1.100–1.700€) | 350³mm, έως 16 χρώματα · 360³mm, έως 5 κεφαλές · SwapTek 9 εργαλείων, θάλαμος 65°C |
 
