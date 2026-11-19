@@ -7,58 +7,78 @@ g = Github(os.environ["GITHUB_TOKEN"])
 repo = g.get_repo(os.environ["REPO_NAME"])
 issue = repo.get_issue(number=int(os.environ["ISSUE_NUMBER"]))
 
+files_dict = {}
 guide_content = ""
 for filepath in glob.glob("**/*.md", recursive=True):
     with open(filepath, "r", encoding="utf-8") as file:
-        guide_content += f"\n--- Αρχείο: {filepath} ---\n"
-        guide_content += file.read()
+        content = file.read()
+        files_dict[filepath] = content
+        guide_content += f"\n--- Αρχείο: {filepath} ---\n{content}"
 
 comments = list(issue.get_comments())
-if comments:
-    user_query = comments[-1].body
-else:
-    user_query = f"{issue.title}\n{issue.body}"
+user_query = comments[-1].body if comments else f"{issue.title}\n{issue.body}"
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
-prompt = f"""
-Είσαι ένας εξειδικευμένος AI βοηθός για έναν οδηγό 3D Printing.
-Απάντησε στην ερώτηση του χρήστη βασιζόμενος ΑΠΟΚΛΕΙΣΤΙΚΑ στις παρακάτω πληροφορίες του οδηγού.
-Αν η απάντηση δεν υπάρχει στον οδηγό, πες ευγενικά ότι δεν καλύπτεται ακόμα από την τεκμηρίωση.
-Απάντησε στα Ελληνικά, με φιλικό και κατανοητό ύφος.
+available_models = [
+    m.name.replace("models/", "") for m in client.models.list()
+    if "gemini" in m.name and not any(x in m.name for x in ["embedding", "imagen", "veo"])
+]
 
-ΠΕΡΙΕΧΟΜΕΝΟ ΟΔΗΓΟΥ:
-{guide_content}
+def ask_gemini(prompt_text):
+    for model_name in available_models:
+        try:
+            res = client.models.generate_content(model=model_name, contents=prompt_text)
+            return res.text
+        except Exception:
+            continue
+    raise RuntimeError("Δεν βρέθηκε ενεργό μοντέλο.")
 
-ΕΡΩΤΗΣΗ ΧΡΗΣΤΗ:
-{user_query}
-"""
+if user_query.strip().startswith("/add"):
+    task = user_query.replace("/add", "", 1).strip()
+    prompt = f"""
+    Είσαι συντάκτης ενός κορυφαίου οδηγού 3D Printing στα Ελληνικά.
+    Ο διαχειριστής σου ζητά να προσθέσεις νέο περιεχόμενο στον οδηγό: "{task}"
+    
+    Διάβασε τα υπάρχοντα αρχεία του οδηγού:
+    {guide_content}
+    
+    Απάντησε ΑΥΣΤΗΡΑ με την εξής μορφή ώστε να γίνει αυτόματη αποθήκευση:
+    FILE: <ακριβές όνομα υπάρχοντος αρχείου .md ή νέου αρχείου .md>
+    CONTENT:
+    <ολόκληρο το ενημερωμένο περιεχόμενο του αρχείου σε καθαρό Markdown χωρίς backticks στην αρχή/τέλος>
+    """
+    result = ask_gemini(prompt)
+    
+    lines = result.splitlines()
+    target_file = lines[0].replace("FILE:", "").strip()
+    new_content = "\n".join(lines[2:]).strip()
+    
+    branch_name = f"ai-update-issue-{issue.number}"
+    main_ref = repo.get_git_ref("heads/main")
+    repo.create_git_ref(ref=f"refs/heads/{branch_name}", sha=main_ref.object.sha)
+    
+    if target_file in files_dict:
+        existing_file = repo.get_contents(target_file, ref="main")
+        repo.update_file(target_file, f"AI προσθήκη περιεχομένου (#{issue.number})", new_content, existing_file.sha, branch=branch_name)
+    else:
+        repo.create_file(target_file, f"AI νέο αρχείο (#{issue.number})", new_content, branch=branch_name)
+        
+    pr = repo.create_pull(title=f"AI Προσθήκη: {task[:50]}", body=f"Αυτόματη πρόταση από το Issue #{issue.number}", head=branch_name, base="main")
+    issue.create_comment(f"Ετοίμασα το νέο περιεχόμενο στο αρχείο `{target_file}`! Μπορείς να το ελέγξεις και να το εγκρίνεις (Merge) εδώ: {pr.html_url}")
 
-available_models = []
-for m in client.models.list():
-    name = m.name.replace("models/", "")
-    if "gemini" in name and "embedding" not in name and "imagen" not in name and "veo" not in name:
-        available_models.append(name)
+else:
+    prompt = f"""
+    Είσαι ένας εξειδικευμένος AI βοηθός για έναν οδηγό 3D Printing.
+    Απάντησε στην ερώτηση του χρήστη βασιζόμενος ΑΠΟΚΛΕΙΣΤΙΚΑ στις παρακάτω πληροφορίες του οδηγού.
+    Αν η απάντηση δεν υπάρχει στον οδηγό, πες ευγενικά ότι δεν καλύπτεται ακόμα από την τεκμηρίωση.
+    Απάντησε στα Ελληνικά, με φιλικό και κατανοητό ύφος.
 
-print("Διαθέσιμα μοντέλα:", available_models)
+    ΠΕΡΙΕΧΟΜΕΝΟ ΟΔΗΓΟΥ:
+    {guide_content}
 
-response_text = None
-last_error = None
-
-for model_name in available_models:
-    try:
-        response = client.models.generate_content(
-            model=model_name,
-            contents=prompt,
-        )
-        response_text = response.text
-        print(f"Επιτυχία με το μοντέλο: {model_name}")
-        break
-    except Exception as e:
-        last_error = e
-        print(f"Αποτυχία με {model_name}: {e}")
-
-if not response_text:
-    raise RuntimeError(f"Δεν βρέθηκε ενεργό μοντέλο. Διαθέσιμα: {available_models}. Τελευταίο σφάλμα: {last_error}")
-
-issue.create_comment(response_text)
+    ΕΡΩΤΗΣΗ ΧΡΗΣΤΗ:
+    {user_query}
+    """
+    reply = ask_gemini(prompt)
+    issue.create_comment(reply)
