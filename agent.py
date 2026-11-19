@@ -34,9 +34,30 @@ prompt = f"""
 {user_query}
 """
 
-response = client.models.generate_content(
-    model='gemini-3.0-flash',
-    contents=prompt,
-)
+models_to_try = [
+    "gemini-2.5-flash-lite",
+    "gemini-3-flash-preview",
+    "gemini-2.5-pro",
+    "gemini-2.0-flash"
+]
 
-issue.create_comment(response.text)
+response_text = None
+last_error = None
+
+for model_name in models_to_try:
+    try:
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt,
+        )
+        response_text = response.text
+        print(f"Success with {model_name}")
+        break
+    except Exception as e:
+        last_error = e
+        print(f"Failed with {model_name}: {e}")
+
+if not response_text:
+    raise RuntimeError(f"Κανένα μοντέλο δεν λειτούργησε. Τελευταίο σφάλμα: {last_error}")
+
+issue.create_comment(response_text)
