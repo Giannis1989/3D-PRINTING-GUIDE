@@ -20,13 +20,13 @@
 
 Ενδεικτικές τιμές ανά kg (οι θερμοκρασίες στην ετικέτα του καρουλιού υπερισχύουν):
 
-- **PLA οικονομικά:** Jayo (11–17€), ELEGOO Rapid PLA+ (13–19€), Creality Hyper PLA (14–22€, έως 600mm/s), SUNLU PLA+ 2.0, Anycubic, Geeetech (~14–20€).
-- **PLA μεσαία:** eSUN PLA+ (16–23€), Polymaker PolyLite/PolyTerra (18–28€, το PolyTerra ματ και με χάρτινο καρούλι), Overture, ERYONE (silk, dual-color), Devil Design, 3DJAKE ecoPLA, Spectrum (πολωνική), Bambu Lab PLA Basic (18–28€, RFID).
+- **PLA οικονομικά:** Jayo (11–17€), ELEGOO Rapid PLA+ (13–19€), Creality Hyper PLA (14–22€, έως 600mm/s), SUNLU PLA+ 2.0, Anycubic, Geeetech, Kingroon, Giantarm (~13–20€).
+- **PLA μεσαία:** eSUN PLA+ (16–23€), Polymaker PolyLite/PolyTerra (18–28€, το PolyTerra ματ και με χάρτινο καρούλι), Overture, ERYONE (silk, dual-color), Devil Design, 3DJAKE ecoPLA, Spectrum (πολωνική), Bambu Lab PLA Basic (18–28€, RFID), Inland.
 - **PLA premium:** FormFutura EasyFil ePLA (20–38€), Fillamentum Extrafill (26–40€, γκλίτερ), Prusament PLA (30–40€, ±0.02mm, QR ανά μπομπίνα), Das Filament (24–32€), Extrudr PLA NX2 (25–35€).
-- **PETG:** SUNLU (14–20€), eSUN (16–23€), Polymaker PolyLite (20–28€), Bambu Lab PETG HF (20–30€), Prusament PETG (28–38€, κορυφαίο για μηχανικά μέρη).
-- **ABS/ASA:** eSUN ABS+ (18–25€), Polymaker PolyLite ASA (24–34€, UV), Prusament ASA (35–45€).
-- **TPU:** SUNLU TPU 95A (20–28€), Polymaker PolyFlex TPU95 (28–38€), NinjaTek NinjaFlex/Cheetah (45–60€), Recreus Filaflex (40–55€).
-- **Επιπλέον μάρκες:** Neofil3D (~20–26€), Kingroon, Fiberlogy, Filamentive, Sakata 3D, Flashforge.
+- **PETG:** SUNLU (14–20€), eSUN (16–23€), Polymaker PolyLite (20–28€), Bambu Lab PETG HF (20–30€), Prusament PETG (28–38€), Voxelab (15–22€).
+- **ABS/ASA:** eSUN ABS+ (18–25€), Polymaker PolyLite ASA (24–34€, UV), Prusament ASA (35–45€), KVP (κορυφαία ποιότητα ABS).
+- **TPU:** SUNLU TPU 95A (20–28€), Polymaker PolyFlex TPU95 (28–38€), NinjaTek NinjaFlex/Cheetah (45–60€), Recreus Filaflex (40–55€), Overture TPU.
+- **Εξειδικευμένες μάρκες:** Neofil3D (~20–26€), Fiberlogy (υψηλή ποιότητα), Filamentive (ανακυκλωμένα), Sakata 3D, Flashforge, AzureFilm.
 - **Ελληνικά καταστήματα:** 3Dexpert.gr, 3DHUB.gr, Hellas3D, Get3D και σύγκριση τιμών στο Skroutz.
 
 ---
