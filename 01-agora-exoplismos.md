@@ -5,22 +5,24 @@
 - **Bambu Lab (~200€–2.700€):** οι ηγέτες στην ταχύτητα και την ευχρηστία (σειρές A1, P1, X1, H3).
 - **Creality (~150€–1.400€):** η πιο διαδεδομένη επιλογή με τεράστια κοινότητα (Ender-3 V3, K1, K2 Plus).
 - **Prusa Research (~450€–3.500€):** ορισμός της αξιοπιστίας και του open-source (MK4S, MINI+, XL).
-- **Elegoo (~160€–500€):** κυριαρχεί σε vfm FDM (Neptune 4) και ρητίνη (Saturn 4 Ultra).
-- **Anycubic (~150€–550€):** σειρά Kobra για προσιτή πολυχρωμία και Kobra 3 Combo.
+- **Elegoo (~160€–650€):** κυριαρχεί σε vfm FDM (σειρά Neptune 4 & Centauri).
+- **Snapmaker (~700€–2.500€):** modular συστήματα (εκτύπωση, CNC, laser) με το νέο U1.
+- **Anycubic (~150€–550€):** σειρά Kobra για προσιτή πολυχρωμία.
 - **QIDI Tech (~350€–800€):** ειδικοί σε εκτυπωτές με κλειστό θάλαμο για απαιτητικά υλικά.
 
 ## 2. Προτεινόμενα μοντέλα ανά κατηγορία μπάτζετ
 
 | Κατηγορία | Μοντέλα | Χαρακτηριστικά |
 | :--- | :--- | :--- |
-| **Οικονομική (έως 300€)** | Bambu Lab A1 Mini (~200€) · Creality Ender-3 V3 (~230€) · Elegoo Neptune 4 Pro (~240€) | 180³mm έως 220³mm, αυτόματο leveling |
-| **Μεσαία (300–700€)** | Bambu Lab A1 (~350€) · Anycubic Kobra 3 Combo (~390€) · Creality K1C (~500€) · Bambu Lab P1S (~650€) | Πολυχρωμία (AMS), κλειστοί θάλαμοι, AI |
-| **Υψηλή (700–1.300€)** | Bambu Lab X1 Carbon (~1.050€) · Prusa MK4S (~900€) · QIDI X-Plus 3 (~750€) | Lidar, Carbon Fiber, προηγμένοι αισθητήρες |
-| **Επαγγελματική (>1.300€)** | Creality K2 Plus Combo (~1.400€) · Prusa XL (~2.500€+) · Bambu Lab H3C (~2.600€) | Μεγάλος όγκος, πολλαπλά εργαλεία/χρώματα |
+| **Οικονομική (<300€)** | Bambu Lab A1 Mini (~200€) · Creality Ender-3 V3 (~230€) · Elegoo Neptune 4 Pro (~240€) | 180³mm έως 220³mm, αυτόματο leveling |
+| **Μεσαία (300–700€)** | Bambu Lab A1 (~350€) · Anycubic Kobra 3 Combo (~390€) · Elegoo Centauri Carbon 2 (~550€) · Bambu Lab P1S (~650€) | Πολυχρωμία, κλειστοί θάλαμοι, ταχύτητα |
+| **Υψηλή (700–1.400€)** | Snapmaker U1 (~850€) · Bambu Lab X1 Carbon (~1.050€) · Prusa MK4S (~900€) · QIDI X-Plus 3 (~750€) | Lidar, Carbon Fiber, προηγμένοι αισθητήρες |
+| **Επαγγελματική (>1.400€)** | Creality K2 Plus Combo (~1.400€) · Bambu Lab H3C (~2.600€) · Prusa XL (~2.500€+) | Μεγάλος όγκος, πολλαπλά εργαλεία |
 
-- **«Πατάω ένα κουμπί»:** Bambu Lab A1 / P1S.
-- **Για ABS/ASA/Nylon:** Απαραίτητα κλειστός θάλαμος (K1C, P1S, X1C, QIDI).
-- **Για αρχάριους:** Bambu Lab A1 Mini ή Creality V3.
+- **«Πατάω ένα κουμπί»:** Bambu Lab A1 / P1S / X1C.
+- **Υβριδική χρήση (3-σε-1):** Snapmaker U1.
+- **Για Carbon Fiber/Engineering:** Elegoo Centauri Carbon 2, Creality K1C, P1S.
+- **Για αρχάριους:** Bambu Lab A1 Mini ή Creality Ender-3 V3.
 
 ## 3. Αγορά μεταχειρισμένου: checklist ελέγχου
 
@@ -38,8 +40,8 @@
 
 ## 5. Αναβαθμίσεις που αξίζουν vs περιττά έξοδα
 
-- **Αξίζουν:** Textured PEI πλάκα (για τέλειο κάτω μέρος), Hardened Steel Nozzle (για CF/Glow υλικά), Filament Dryer (οικονομικό, βελτιώνει θεαματικά την ποιότητα).
-- **Αποφύγετε:** Αλλαγή μητρικής/μοτέρ σε σύγχρονους εκτυπωτές, ακριβά "fancy" hotends αν δεν είστε έμπειροι, αγορά αξεσουάρ που μπορείτε να εκτυπώσετε μόνοι σας.
+- **Αξίζουν:** Textured PEI πλάκα (για τέλειο κάτω μέρος), Hardened Steel Nozzle (για CF/Glow υλικά), Filament Dryer.
+- **Αποφύγετε:** Αλλαγή μητρικής/μοτέρ σε σύγχρονους εκτυπωτές (K1, Bambu, Neptune 4), ακριβά "fancy" hotends αν δεν είστε έμπειροι.
 
 ---
 [🏠 Πίνακας Περιεχομένων](README.md) | [Επόμενο: Μέρος Β ➡️](02-ylika-akrofysia.md)
