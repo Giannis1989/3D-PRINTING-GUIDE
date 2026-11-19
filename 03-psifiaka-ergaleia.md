@@ -13,11 +13,6 @@
 "All-in-One Online Εργαλειοθήκη: Minimal 3DP Ecosystem"
 https://minimal3dp.com ο Minimal 3DP Ecosystem είναι μια δωρεάν, all-in-one web εργαλειοθήκη για 3D printing που καλύπτει όλη τη διαδικασία της εκτύπωσης. Συγκεντρώνει σε ένα σημείο γεννήτρια προφίλ και ρυθμίσεων για το OrcaSlicer (OrcaSlicer Settings), οδηγό αναζήτησης και επιλογής νημάτων (Filament Wizard & Finder), υπολογιστή συρρίκνωσης υλικών (Shrinkage Calc), καθώς και εργαλείο ακριβούς κοστολόγησης εκτυπώσεων (FDM Cost Calculator)
      
-    * **Slicing & Βαθμονόμηση:** Γεννήτρια προφίλ για **OrcaSlicer** (*OrcaSlicer Settings*) και υπολογιστής συρρίκνωσης υλικών (*Shrinkage Calc*).
-    * **Υλικά:** Οδηγός επιλογής (*Filament Wizard*) και μηχανή αναζήτησης νημάτων (*Filament Finder*).
-    
-    * **Slicing & Βαθμονόμηση:** Γεννήτρια προφίλ για **OrcaSlicer** (*OrcaSlicer Settings*) και υπολογιστής συρρίκνωσης υλικών (*Shrinkage Calc*).
-    * **Υλικά:** Οδηγός επιλογής (*Filament Wizard*) και μηχανή αναζήτησης νημάτων (*Filament Finder*).
 ## 13. Slicer, CAD & reverse engineering
 
 - **Slicers:** OrcaSlicer (open-source, με calibration tests), Bambu Studio, PrusaSlicer, UltiMaker Cura, Kiri:Moto (grid.space/kiri, τρέχει στον browser ακόμη και από κινητό), Creality Print.
