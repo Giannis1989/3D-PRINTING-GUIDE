@@ -10,7 +10,7 @@
 - **Μηχανές αναζήτησης STL:** Yeggi, Thangs, 3D Search, PrintWhat.
 - **Ειδικά εργαλεία:** Lithophane Maker (lithophanemaker.com), BumpMesh (bumpmesh.com) και μετατροπείς προφίλ Bambu σε Elegoo/Flashforge/Snapmaker (3dtoolbox.uk/converter, bedready.io/convert, u1convert.com)
   
-info "All-in-One Online Εργαλειοθήκη: Minimal 3DP Ecosystem"
+"All-in-One Online Εργαλειοθήκη: Minimal 3DP Ecosystem"
 https://minimal3dp.com ο Minimal 3DP Ecosystem είναι μια δωρεάν, all-in-one web εργαλειοθήκη για 3D printing που καλύπτει όλη τη διαδικασία της εκτύπωσης. Συγκεντρώνει σε ένα σημείο γεννήτρια προφίλ και ρυθμίσεων για το OrcaSlicer (OrcaSlicer Settings), οδηγό αναζήτησης και επιλογής νημάτων (Filament Wizard & Finder), υπολογιστή συρρίκνωσης υλικών (Shrinkage Calc), καθώς και εργαλείο ακριβούς κοστολόγησης εκτυπώσεων (FDM Cost Calculator)
      
     * **Slicing & Βαθμονόμηση:** Γεννήτρια προφίλ για **OrcaSlicer** (*OrcaSlicer Settings*) και υπολογιστής συρρίκνωσης υλικών (*Shrinkage Calc*).
