@@ -1,13 +1,37 @@
 {
-  "name": "3D Printing Guide",
-  "short_name": "3D Print Guide",
-  "start_url": "/3D-PRINTING-GUIDE/",
-  "scope": "/3D-PRINTING-GUIDE/",
-  "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "description": "Από αρχάριο σε προχωρημένο - Εξοπλισμός, Υλικά, Slicers, AI &amp; Συντήρηση",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "3d printing Οδηγος Για FDM PRINTERS",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "3d printing manual",
+  "start_url": "/",
+  "theme_color": "#ffffff",
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "https://giannis1989.github.io/3D-PRINTING-GUIDE/assets/images/favicon.png",
+      "type": "image/png",
+      "sizes": "48x48",
+      "isSquare": true,
+      "isPng": true,
+      "isWebp": false,
+      "isJpg": false,
+      "width": 48,
+      "is512x512": false,
+      "is256x256": false,
+      "is192x192": false
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://giannis1989.github.io/3D-PRINTING-GUIDE/",
+      "id": ""
+    }
+  ],
+  "categories": [
+    "education"
   ]
 }
